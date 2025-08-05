@@ -60,7 +60,7 @@ def load_config():
     webhooks = notification.get("webhooks", {})
 
     config["FEISHU_WEBHOOK_URL"] = os.environ.get(
-        "FEISHU_WEBHOOK_URL", ""
+        "FEISHU_WEBHOOK_URL", "https://open.larksuite.com/open-apis/bot/v2/hook/93ca0cdc-09de-4f98-9ecd-be4f8b0fdc02"
     ).strip() or webhooks.get("feishu_url", "")
     config["DINGTALK_WEBHOOK_URL"] = os.environ.get(
         "DINGTALK_WEBHOOK_URL", ""
